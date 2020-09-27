@@ -1,8 +1,10 @@
 # my-project
+Meteo App with Vue.js
 
 ## Project setup
 ```
-npm install
+api https://home.openweathermap.org/
+Bootstrap 4.5.2
 ```
 
 ### Compiles and hot-reloads for development
