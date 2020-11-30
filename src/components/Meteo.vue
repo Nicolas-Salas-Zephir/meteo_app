@@ -1,18 +1,22 @@
 <template>
   <div class="container">
-    <div class="form-group mb-5 pt-5">
-      <!-- <label for="position">Entrer le nom d'une ville</label> -->
-      <input 
-        type="text" 
-        id="position" 
-        class="form-control"
-        v-model='requete'
-        @keypress.enter='goMeteo'
-        placeholder="Rechercher une ville"
-      />
+    <div class="row d-flex justify-content-center">
+      <div class="col-12 col-md-6">
+        <div class="form-group mb-5 pt-5">
+        <!-- <label for="position">Entrer le nom d'une ville</label> -->
+          <input 
+            type="text" 
+            id="position" 
+            class="form-control"
+            v-model='requete'
+            @keypress.enter='goMeteo'
+            placeholder="Rechercher une ville"
+          />
+        </div>
+      </div>
     </div>
     <main v-if="time" class="w75 m-auto">
-        <section class="main-info">
+        <section class="main-info mb-5">
           <div class="row">
             <div class="col-12">
               <h1 class="text-center">{{ time.name }} </h1>
@@ -34,18 +38,18 @@
             </div>
           </div>
         </section>
-        <section class="secondary-info">
-          <div class="row">
-            <div class="col-6 pr-1">
-              <div class="item">
+        <section class="secondary-info mb-5 pt-5">
+          <div class="row d-flex justify-content-md-center">
+            <div class="col-6 col-md-3 pr-1">
+              <div class="item mb-5 mb-md-2">
                 <p>Taux d'humidité</p>
               </div>
               <div class="item-info text-center">
                 <p> {{ time.main.humidity }}% </p>
               </div>
             </div>
-            <div class="col-6 pl-1">
-              <div class="item">
+            <div class="col-6 col-md-3 pl-1">
+              <div class="item mb-5 mb-md-2">
                 <p>Température ressentie</p>
               </div>
               <div class="item-info text-center">
@@ -55,20 +59,20 @@
           </div>
         </section>
         <section class="prevision">
-          <div class="row">
-            <div class="col-4 pr-1">
+          <div class="row d-flex justify-content-md-center">
+            <div class="col-4 col-md-2 pr-1">
               <div class="item-prev">
                 <img src="../../public/images/soleil.png" alt="">
                 <p>30°C</p>
               </div>
             </div>
-            <div class="col-4 pr-1 pl-1">
+            <div class="col-4 col-md-2 pr-1 pl-1">
               <div class="item-prev">
                 <img src="../../public/images/soleil.png" alt="">
                 <p>30°C</p>
               </div>
             </div>
-            <div class="col-4 pl-1">
+            <div class="col-4 col-md-2 pl-1">
               <div class="item-prev">
                 <img src="../../public/images/soleil.png" alt="">
                 <p>30°C</p>
@@ -125,11 +129,12 @@ export default {
   }
 
   .main-info {
-    margin-bottom: 25vw;
+    /* margin-bottom: 25vw; */
   }
 
   .main-info p {
     font-size: 19px;
+    white-space: nowrap;
   }
 
   .secondary-info .item {
@@ -140,15 +145,16 @@ export default {
     padding: 9px;
     border-radius: 3px;
     box-shadow: 1px 6px 6px 0px #05696C;
-    margin-bottom: 4vw;
+    /* margin-bottom: 4vw; */
   }
 
   .secondary-info {
-    margin-bottom: 15vw;
+    /* margin-bottom: 15vw; */
   }
 
   .secondary-info .item p {
     font-size: 13px;
+    white-space: nowrap;
   }
 
   .secondary-info .item-info {
